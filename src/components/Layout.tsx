@@ -1,9 +1,9 @@
-import { Outlet, NavLink, useLocation } from 'react-router-dom';
+import { Outlet, NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import {
   LayoutDashboard, ShoppingCart, Package, ClipboardList,
-  Users, Settings, LogOut, ChevronLeft, Bell, Search,
-  Zap, Menu, TrendingUp
+  Users, Settings, LogOut, ChevronLeft, Bell,
+  Zap, Menu
 } from 'lucide-react';
 import { useAuthStore } from '../store/authStore';
 import toast from 'react-hot-toast';
@@ -20,7 +20,7 @@ const navItems = [
 export default function Layout() {
   const [collapsed, setCollapsed] = useState(false);
   const { user, logout } = useAuthStore();
-  const location = useLocation();
+ // const location = useLocation();
 
   const handleLogout = async () => {
     try {
@@ -163,11 +163,11 @@ export default function Layout() {
                 fontSize: 12, fontWeight: 700, color: 'var(--bg-crust)',
                 flexShrink: 0,
               }}>
-                {user?.first_name?.[0]}{user?.last_name?.[0]}
+                {user?.name?.[0]}{user?.name?.[1]}
               </div>
               <div style={{ minWidth: 0 }}>
                 <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--text-primary)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                  {user?.first_name} {user?.last_name}
+                  {user?.name} {user?.name}
                 </div>
                 <div style={{ fontSize: 11, color: 'var(--text-subtext)', textTransform: 'capitalize' }}>{user?.role}</div>
               </div>

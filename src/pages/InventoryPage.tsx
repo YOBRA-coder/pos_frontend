@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { productsApi, inventoryApi } from '../api/client';
-import { AlertTriangle, Plus, Minus, RefreshCw, X, Loader2 } from 'lucide-react';
+import { AlertTriangle, RefreshCw, X, Loader2 } from 'lucide-react';
 import toast from 'react-hot-toast';
 import clsx from 'clsx';
 import type { Product } from '../types';

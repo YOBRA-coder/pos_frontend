@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useAuthStore } from '../store';
-import { Edit2, Loader2, Phone, Plus, Save, Trash2, X, Zap } from 'lucide-react';
+import { Edit2, Loader2, Plus, Save, Trash2, X } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { usersApi } from '../api/client';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
@@ -10,7 +10,7 @@ import clsx from 'clsx';
 
 export default function SettingsPage() {
   const { user } = useAuthStore();
-  const [search, setSearch] = useState('');
+  const [search] = useState('');
   const [tab, setTab] = useState('business');
   const [showModal, setShowModal] = useState(false)
   const [form, setForm] = useState({ businessName: '', name: '', email: '', phone: '', password: '' });

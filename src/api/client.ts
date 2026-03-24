@@ -64,7 +64,7 @@ export const inventoryApi = {
 };
 
 export const usersApi = {
-  list: (p: { search: string; }) => api.get('/users'),
+  list: (_p: { search: string; }) => api.get('/users'),
   create: (d: any) => api.post('/users', d),
   update: (id: string, d: any) => api.put(`/users/${id}`, d),
   delete: (id: string) => api.delete(`/users/${id}`),

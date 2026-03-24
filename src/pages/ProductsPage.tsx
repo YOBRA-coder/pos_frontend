@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { productsApi, categoriesApi } from '../api/client';
-import { Plus, Search, Edit2, Trash2, Package, X, Loader2 } from 'lucide-react';
+import { Plus, Search, Edit2, Trash2, X, Loader2 } from 'lucide-react';
 import { useAuthStore } from '../store';
 import toast from 'react-hot-toast';
 import clsx from 'clsx';

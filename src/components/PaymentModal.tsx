@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
 import {
   X, Smartphone, CreditCard, Banknote, Building, Check,
-  Loader2, Phone, AlertCircle, RefreshCw, ArrowRight
+  Loader2, Phone, AlertCircle, RefreshCw
 } from 'lucide-react';
 import { paymentApi } from '../services/api';
 import { useAuthStore } from '../store/authStore';
-import toast from 'react-hot-toast';
 
 const fmt = (n: number, currency = 'KES') =>
   new Intl.NumberFormat('en-KE', { style: 'currency', currency, minimumFractionDigits: 0 }).format(n);
@@ -29,11 +28,10 @@ export default function PaymentModal({ order, onClose, onSuccess }: PaymentModal
   const { user } = useAuthStore();
   const currency = user?.currency || 'KES';
   const [step, setStep] = useState<PaymentStep>('select');
-  const [method, setMethod] = useState<string>('');
+  /*const [method, setMethod] = useState<string>('');*/
   const [mpesaPhone, setMpesaPhone] = useState('');
   const [cashTendered, setCashTendered] = useState('');
   const [paymentId, setPaymentId] = useState('');
-  const [polling, setPolling] = useState(false);
   const [change, setChange] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -175,11 +173,11 @@ export default function PaymentModal({ order, onClose, onSuccess }: PaymentModal
                 <button
                   key={id}
                   onClick={() => {
-                    setMethod(id);
+                    //setMethod(id);
                     if (id === 'mpesa') setStep('mpesa-phone');
                     else if (id === 'credit_card') setStep('card');
                     else if (id === 'cash') setStep('cash');
-                    else if (id === 'bank_transfer') { setMethod('bank_transfer'); handleBankTransfer(); }
+                    else if (id === 'bank_transfer') { /*setMethod('bank_transfer');*/ handleBankTransfer(); }
                   }}
                   style={{
                     padding: '1.25rem',

@@ -94,7 +94,7 @@ export default function DashboardPage() {
               <ResponsiveContainer width="100%" height={140}>
                 <PieChart>
                   <Pie data={paymentData} cx="50%" cy="50%" innerRadius={40} outerRadius={60} paddingAngle={4} dataKey="value">
-                    {paymentData.map((entry: any, i: number) => (
+                    {paymentData.map((_entry: any, i: number) => (
                       <Cell key={i} fill={Object.values(PIE_COLORS)[i % Object.values(PIE_COLORS).length] as string} />
                     ))}
                   </Pie>

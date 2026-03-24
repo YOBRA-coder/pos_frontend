@@ -2,7 +2,7 @@ import { Outlet, NavLink, useNavigate } from 'react-router-dom';
 import {
   LayoutDashboard, ShoppingCart, Package, Users, BarChart3,
   Settings, LogOut, Menu, X, AlertTriangle, Boxes, FileText,
-  Zap, ChevronRight
+  Zap
 } from 'lucide-react';
 import { useAuthStore, useUIStore } from '../../store';
 import { useQuery } from '@tanstack/react-query';

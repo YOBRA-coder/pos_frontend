@@ -1,5 +1,5 @@
-import { useState, useMemo } from 'react';
-import { Search, Plus, Minus, Trash2, ShoppingCart, User, Tag, ChevronDown, X } from 'lucide-react';
+import { useState } from 'react';
+import { Search, Plus, Minus, Trash2, ShoppingCart, User, Tag, X } from 'lucide-react';
 import { useQuery } from '@tanstack/react-query';
 import { productsApi, categoriesApi, customersApi } from '../api/client';
 import { useCartStore, useAuthStore } from '../store';
