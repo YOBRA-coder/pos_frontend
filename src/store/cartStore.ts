@@ -55,6 +55,9 @@ export const useCartStore = create<CartState>((set, get) => ({
           quantity,
           unit_price: product.price,
           discount_amount: 0,
+          product_id: '',
+          product_name: '',
+          total: 0
         }],
       });
     }

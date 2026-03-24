@@ -44,6 +44,7 @@ export interface Customer {
 }
 
 export interface CartItem {
+  product: any;
   product_id: string;
   product_name: string;
   unit_price: number;
