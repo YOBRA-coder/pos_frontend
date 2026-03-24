@@ -1,6 +1,6 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
 
-const BASE_URL = 'https://eryn-semihumanized-willard.ngrok-free.dev/api';
+const BASE_URL = 'https://pos-backend-1-8vot.onrender.com/api';
 
 class ApiService {
   private client: AxiosInstance;

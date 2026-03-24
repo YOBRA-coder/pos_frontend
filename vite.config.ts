@@ -6,9 +6,9 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-      '/api': { target: 'https://eryn-semihumanized-willard.ngrok-free.dev', changeOrigin: true }
+      '/api': { target: 'https://pos-backend-1-8vot.onrender.com/', changeOrigin: true }
     },
-    allowedHosts: ["eryn-semihumanized-willard.ngrok-free.dev"]
+    //allowedHosts: ["https://pos-backend-1-7h9e.onrender.com/]
   }
 
 })
