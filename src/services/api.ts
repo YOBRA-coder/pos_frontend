@@ -1,5 +1,4 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
-import toast from 'react-hot-toast';
 
 const BASE_URL = 'https://eryn-semihumanized-willard.ngrok-free.dev/api';
 

@@ -38,12 +38,12 @@ export const useCartStore = create<CartState>((set, get) => ({
 
   addItem: (product, quantity = 1) => {
     const { items } = get();
-    const existing = items.find((i) => i.product.id === product.id);
+    const existing = items.find((i) => i.product_id === product.id);
 
     if (existing) {
       set({
         items: items.map((i) =>
-          i.product.id === product.id
+          i.product_id === product.id
             ? { ...i, quantity: i.quantity + quantity }
             : i
         ),
@@ -51,7 +51,6 @@ export const useCartStore = create<CartState>((set, get) => ({
     } else {
       set({
         items: [...items, {
-          product,
           quantity,
           unit_price: product.price,
           discount_amount: 0,
@@ -64,7 +63,7 @@ export const useCartStore = create<CartState>((set, get) => ({
   },
 
   removeItem: (productId) => {
-    set({ items: get().items.filter((i) => i.product.id !== productId) });
+    set({ items: get().items.filter((i) => i.product_id !== productId) });
   },
 
   updateQuantity: (productId, quantity) => {
@@ -74,7 +73,7 @@ export const useCartStore = create<CartState>((set, get) => ({
     }
     set({
       items: get().items.map((i) =>
-        i.product.id === productId ? { ...i, quantity } : i
+        i.product_id === productId ? { ...i, quantity } : i
       ),
     });
   },
@@ -82,7 +81,7 @@ export const useCartStore = create<CartState>((set, get) => ({
   updateItemDiscount: (productId, discount) => {
     set({
       items: get().items.map((i) =>
-        i.product.id === productId ? { ...i, discount_amount: discount } : i
+        i.product_id === productId ? { ...i, discount_amount: discount } : i
       ),
     });
   },
@@ -90,7 +89,7 @@ export const useCartStore = create<CartState>((set, get) => ({
   updateItemNotes: (productId, notes) => {
     set({
       items: get().items.map((i) =>
-        i.product.id === productId ? { ...i, notes } : i
+        i.product_id === productId ? { ...i, notes } : i
       ),
     });
   },
