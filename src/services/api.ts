@@ -1,6 +1,6 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
 
-const BASE_URL = 'https://pos-backend-1-8vot.onrender.com/api';
+const BASE_URL = 'https://posbackend-production-d5e4.up.railway.app/api';
 
 class ApiService {
   private client: AxiosInstance;
