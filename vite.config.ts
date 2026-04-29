@@ -6,9 +6,9 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-      '/api': { target: 'https://pos-backend-1-8vot.onrender.com/', changeOrigin: true }
+      '/api': { target: 'https://posbackend-production-d5e4.up.railway.app', changeOrigin: true }
     },
-    //allowedHosts: ["https://pos-backend-1-7h9e.onrender.com/]
+    //allowedHosts: ["https://posbackend-production-d5e4.up.railway.app"]
   }
 
 })
