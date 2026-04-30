@@ -6,9 +6,10 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-      '/api': { target: 'https://posbackend-production-d5e4.up.railway.app', changeOrigin: true }
+      '/api': { target: 'https://posbackend-production-d5e4.up.railway.app', 
+changeOrigin: true,
+secure: false}
     },
-    //allowedHosts: ["https://posbackend-production-d5e4.up.railway.app"]
   }
 
 })
