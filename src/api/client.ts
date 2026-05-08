@@ -1,7 +1,7 @@
 import axios from 'axios';
 import toast from 'react-hot-toast';
 
-const api = axios.create({ baseURL: 'https://pos-backed-raei.onrender.com', timeout: 30000 });
+const api = axios.create({ baseURL: 'https://pos-backed-raei.onrender.com/api', timeout: 30000 });
 
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('pos_token');
