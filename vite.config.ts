@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-      '/api': { target: 'https://posbackend-production-d5e4.up.railway.app', 
+      '/api': { target: 'https://pos-backed-raei.onrender.com', 
 changeOrigin: true,
 secure: false}
     },
